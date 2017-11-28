@@ -1,0 +1,49 @@
+.btn:focus,.btn:active {
+    outline: none !important;
+}
+.form-inline .form-group{
+    margin-left: 0;
+    margin-right: 0;
+}
+.glyphicon-spin {
+    -webkit-animation: spin 1000ms infinite linear;
+    animation: spin 1000ms infinite linear;
+}
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}
+@keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}
+.modal-content {
+    max-height: 500px;
+    overflow-y: scroll;
+}
+
+#pageFooter {
+    background-color: #3a3f46;
+    color: white;
+    flex: 0 0 auto;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin-left: -10px;
+}
+
+#pageFooter a, #pageFooter p {
+    color: #d2d1d1;
+}
