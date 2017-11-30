@@ -41,7 +41,7 @@ Quick Start
   - Valid User and Token to run that Jenkins Job.
   - A connection tunnel on port 8084 to the Spinnaker server. 
   - Valid Projects inside Spinnaker with already setup pipelines that had been run for at least once.
-  - Your pipeline docker registry image tag should configured with this. `${trigger.parameters.tag}`
+  - Your pipeline docker registry image tag should configured with this. `${trigger['tag']}`
 
 - Clone the repo into your web directory.
 - Configure the `config/config.php` as mentioned [here](#configuration-configconfigphp).

@@ -22,8 +22,9 @@ $jen2SpinnakerVersion = trim(file_get_contents('backend/version'));
                 <div class="col-sm-3">
                     <select id="projectSelector" class="form-control"></select>
                 </div>
-                <div class="col-sm-3">
+                <div class="col-sm-5">
                     <button disabled class="btn btn-primary submitButton"><?php echo $JenkinsJobShortTitle;?></button>
+                    <button disabled class="btn btn-info bulkDeploySpinnaker">Bulk deploy to Spinnaker</button>
                 </div>
             </div>
         </div>
@@ -41,10 +42,10 @@ $jen2SpinnakerVersion = trim(file_get_contents('backend/version'));
                 <div class="col-md-2">
                     <label>Service Name</label>
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-1">
                     <label>Image Tag</label>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <label>Image Group to be pushed</label>
                 </div>
                 <div class="col-md-1">
@@ -61,6 +62,7 @@ $jen2SpinnakerVersion = trim(file_get_contents('backend/version'));
                 </div>
             </div>
         </div>
+        <div class="form-group">
         <div class="row">
             <form id="serviceForm">
                 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
@@ -72,7 +74,13 @@ $jen2SpinnakerVersion = trim(file_get_contents('backend/version'));
                     <div id="serviceList" class="panel-body hidden"></div>
                 </div>
             </form>
-            <button disabled class="btn btn-primary submitButton"><?php echo $JenkinsJobShortTitle;?></button>
+        </div>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <button disabled class="btn btn-primary submitButton"><?php echo $JenkinsJobShortTitle;?></button>
+                <button disabled class="btn btn-info bulkDeploySpinnaker">Bulk deploy to Spinnaker</button>
+            </div>
         </div>
     </div>
 </div>
