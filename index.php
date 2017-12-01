@@ -18,7 +18,7 @@ $jen2SpinnakerVersion = trim(file_get_contents('backend/version'));
     <div class="col-md-12">
         <div class="row">
             <div class="form-group">
-                <h4 class="col-sm-3 control-label">Services of Project :</h4>
+                <h4 class="col-sm-3 control-label">Services of the Project :</h4>
                 <div class="col-sm-3">
                     <select id="projectSelector" class="form-control"></select>
                 </div>
