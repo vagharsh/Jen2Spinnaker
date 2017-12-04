@@ -63,18 +63,18 @@ $jen2SpinnakerVersion = trim(file_get_contents('backend/version'));
             </div>
         </div>
         <div class="form-group">
-        <div class="row">
-            <form id="serviceForm">
-                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                    <div class="progress" id="loadingArea">
-                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
-                            <span >Loading</span>
+            <div class="row" style="overflow-x: auto; max-height: 65vh; overflow-y: auto;">
+                <form id="serviceForm">
+                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                        <div class="progress" id="loadingArea">
+                            <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                                <span >Loading</span>
+                            </div>
                         </div>
+                        <div id="serviceList" class="panel-body hidden"></div>
                     </div>
-                    <div id="serviceList" class="panel-body hidden"></div>
-                </div>
-            </form>
-        </div>
+                </form>
+            </div>
         </div>
         <div class="form-group">
             <div class="row">
