@@ -36,12 +36,14 @@ Screen-shots of the application are coming soon.
 Quick Start
 -----------
 - To use the Jen2Spinnaker you need:
-  - PHP and a web server.
-  - Valid Jenkins Job to move the images from Local registry to Production.
-  - Valid User and Token to run that Jenkins Job.
-  - A connection tunnel on port 8084 to the Spinnaker server. 
-  - Valid Projects inside Spinnaker with already setup pipelines.
-  - Your pipeline docker registry image tag should configured with this `${trigger['tag']}`.
+  - **[WEB]** PHP and a web server.
+  - **[Jenkins]** Valid Jenkins Job to move the images from Local registry to Production, with 2 parameters.
+    - IMAGE_TAG
+     - IMAGE_GROUP
+  - **[Jenkins]** Valid User and Token to run that Jenkins Job.
+  - **[Spinnaker]** A connection tunnel on port 8084 to the Spinnaker server. 
+  - **[Spinnaker]** Valid Projects inside Spinnaker with already setup pipelines.
+  - **[Spinnaker]** Your pipeline docker registry image tag should configured with this `${trigger['tag']}`.
 
 - Clone the repo into your web directory.
 - Configure the `config/config.php` as mentioned [here](#configuration-configconfigphp).
