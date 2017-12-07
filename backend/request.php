@@ -4,8 +4,8 @@ include_once('../config/config.php');
 
 if ($_SERVER['REQUEST_METHOD'] === "POST"){
     // Building the jenkins job
-    $image_list = $_POST['image_group'];
-    $image_tag = $_POST['image_tag'];
+    $image_list = trim($_POST['image_group']);
+    $image_tag = trim($_POST['image_tag']);
     $returnData = [];
     foreach ($image_list as $key => $image_group) {
         // data format as needed to be sent to the Jenkins Job

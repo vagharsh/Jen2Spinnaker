@@ -9,19 +9,20 @@ $jen2SpinnakerVersion = trim(file_get_contents('backend/version'));
     <meta charset="utf-8">
     <title><?php echo $title; ?></title>
     <link rel="shortcut icon" href="lib/favicon.png"/>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="lib/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="lib/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="lib/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="lib/css/style.css">
 </head>
 <body>
 <div class="container" style="padding-top: 30px">
     <div class="col-md-12">
         <div class="row">
             <div class="form-group">
-                <h4 class="col-sm-3 control-label">Services of the Project :</h4>
-                <div class="col-sm-3">
+                <h4 class="col-sm-2 control-label">Spinnaker Projects :</h4>
+                <div class="col-sm-2">
                     <select id="projectSelector" class="form-control"></select>
                 </div>
+
                 <div class="col-sm-5">
                     <button disabled class="btn btn-primary submitButton"><?php echo $JenkinsJobShortTitle;?></button>
                     <button disabled class="btn btn-info bulkDeploySpinnaker">Bulk deploy to Spinnaker</button>
@@ -29,15 +30,12 @@ $jen2SpinnakerVersion = trim(file_get_contents('backend/version'));
             </div>
         </div>
         <hr>
-        <div class="form-group">
             <div class="row">
                 <div class="col-md-12">
-                    <p class="bg-danger col-md-9 text-center"><strong>Jenkins</strong></p>
-                    <p class="bg-info col-md-3 text-center"><strong>Spinnaker</strong></p>
+                    <p class="bg-danger col-md-9 text-center">Jenkins</p>
+                    <p class="bg-info col-md-3 text-center">Spinnaker</p>
                 </div>
             </div>
-        </div>
-        <div class="form-group">
             <div class="row">
                 <div class="col-md-2">
                     <label>Service Name</label>
@@ -60,14 +58,13 @@ $jen2SpinnakerVersion = trim(file_get_contents('backend/version'));
                 <div class="col-md-1">
                     <label>Logs</label>
                 </div>
-            </div>
         </div>
         <div class="form-group">
             <div class="row" style="overflow-x: auto; max-height: 65vh; overflow-y: auto;">
                 <form id="serviceForm">
                     <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                         <div class="progress" id="loadingArea">
-                            <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                            <div id="progressDiv" class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
                                 <span >Loading</span>
                             </div>
                         </div>
@@ -97,10 +94,10 @@ $jen2SpinnakerVersion = trim(file_get_contents('backend/version'));
         </ul>
     </div>
 </footer>
-<script type="text/javascript" language="javascript" src="lib/jquery-1.11.3.min.js"></script>
-<script type="text/javascript" language="javascript" src="lib/bootstrap.min.js"></script>
-<script type="text/javascript" language="javascript" src="lib/functions.js"></script>
-<script type="text/javascript" language="javascript" src="lib/triggers.js"></script>
+<script type="text/javascript" language="javascript" src="lib/js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" language="javascript" src="lib/js/bootstrap.min.js"></script>
+<script type="text/javascript" language="javascript" src="lib/js/functions.js"></script>
+<script type="text/javascript" language="javascript" src="lib/js/triggers.js"></script>
 <script>
     $(document).ready(function () {
         var rowContent = '';

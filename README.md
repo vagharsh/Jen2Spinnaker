@@ -40,8 +40,8 @@ Quick Start
   - Valid Jenkins Job to move the images from Local registry to Production.
   - Valid User and Token to run that Jenkins Job.
   - A connection tunnel on port 8084 to the Spinnaker server. 
-  - Valid Projects inside Spinnaker with already setup pipelines that had been run for at least once.
-  - Your pipeline docker registry image tag should configured with this. `${trigger['tag']}`
+  - Valid Projects inside Spinnaker with already setup pipelines.
+  - Your pipeline docker registry image tag should configured with this `${trigger['tag']}`.
 
 - Clone the repo into your web directory.
 - Configure the `config/config.php` as mentioned [here](#configuration-configconfigphp).
@@ -64,8 +64,10 @@ $title = "Deploy Micro-Services";
 
 Release Notes
 ---------
-v 1.0
-- working stable version of Jen2Spinnaker.
+v 1.1
+- Added a progress bar for the pipelines loading.
+- Inputs are now trimmed for whitespace before pushing to Jenkins and Spinnaker.
+- Other UI enhancements.
 
 Release notes are available [here](release.md).
 
