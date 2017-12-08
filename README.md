@@ -43,7 +43,7 @@ Quick Start
   - **[Jenkins]** Valid User and Token to run that Jenkins Job.
   - **[Spinnaker]** A connection tunnel on port 8084 to the Spinnaker server. 
   - **[Spinnaker]** Valid Projects inside Spinnaker with already setup pipelines.
-  - **[Spinnaker]** Your pipeline docker registry image tag should configured with this `${trigger['tag']}`.
+  - **[Spinnaker]** Your docker registry image tag in the pipeline should be configured with `${trigger['tag']}`.
 
 - Clone the repo into your web directory.
 - Configure the `config/config.php` as mentioned [here](#configuration-configconfigphp).
@@ -66,10 +66,8 @@ $title = "Deploy Micro-Services";
 
 Release Notes
 ---------
-v 1.1
-- Added a progress bar for the pipelines loading.
-- Inputs are now trimmed for whitespace before pushing to Jenkins and Spinnaker.
-- Other UI enhancements.
+v 1.2
+- Added connection check and a warning message if no connection.
 
 Release notes are available [here](release.md).
 
