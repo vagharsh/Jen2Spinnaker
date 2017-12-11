@@ -1,7 +1,7 @@
 # Jen2Spinnaker
 
 - Jenkins to Spinnaker (Build and Deploy UI)
-- A UI that helps you move your **Microservice** images from your local registry to production and deploy them using Spinnaker. 
+- A UI that helps you move your **Micro-service** images from your local registry to production and deploy them using Spinnaker. 
 
 **Used Technologies:** JS, HTML, CSS, PHP, JQuery, Twitter Bootstrap.
 
@@ -31,7 +31,7 @@ Need to know
    
 Demo
 ------
-Screen-shots of the application are coming soon.
+![Dashboard](https://image.ibb.co/cccHKb/Capture.png "Dashboard")
 
 Quick Start
 -----------
