@@ -1,5 +1,9 @@
 Release Notes
 ---------
+[v1.3](#)
+- Added feature : Import service tags from JSON file.
+- Added feature : Check all services buttons, check all pushed checkboxes.
+
 [v1.2](#)
 - Added connection check and a warning message if no connection.
 

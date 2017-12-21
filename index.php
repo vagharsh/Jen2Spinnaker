@@ -14,7 +14,7 @@ $jen2SpinnakerVersion = trim(file_get_contents('backend/version'));
     <link rel="stylesheet" href="lib/css/style.css">
 </head>
 <body>
-<div class="container" style="padding-top: 30px">
+<div class="container" style="padding-top: 20px">
     <div class="col-md-12">
         <div class="row">
             <div class="form-group">
@@ -23,9 +23,12 @@ $jen2SpinnakerVersion = trim(file_get_contents('backend/version'));
                     <select id="projectSelector" class="form-control"></select>
                 </div>
 
-                <div class="col-sm-5">
+                <div class="col-sm-6">
                     <button disabled class="btn btn-primary submitButton"><?php echo $JenkinsJobShortTitle; ?></button>
                     <button disabled class="btn btn-info bulkDeploySpinnaker">Bulk deploy to Spinnaker</button>
+                    <button class="btn btn-default" data-toggle="modal" data-target="#importJSONModalId">Import tags via
+                        JSON
+                    </button>
                 </div>
             </div>
         </div>
@@ -38,19 +41,20 @@ $jen2SpinnakerVersion = trim(file_get_contents('backend/version'));
         </div>
         <div class="row">
             <div class="col-md-2">
-                <label>Service Name</label>
+                <label>Service Name </label> <span id="selectAllSvcId" class='glyphicon glyphicon-unchecked'></span>
             </div>
             <div class="col-md-1">
                 <label>Image Tag</label>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4" style="margin-right: -10px!important;">
                 <label>Image Group to be pushed</label>
             </div>
             <div class="col-md-1">
                 <label>Status</label>
             </div>
             <div class="col-md-1">
-                <label>Pushed</label>
+                <label>Pushed</label> <span id="selectAllPushedId"
+                                            class='glyphicon glyphicon-unchecked disabled'></span>
             </div>
             <div class="col-md-2">
                 <label>Deploy to Spinnaker</label>
@@ -106,6 +110,35 @@ $jen2SpinnakerVersion = trim(file_get_contents('backend/version'));
             </div>
             <div class="modal-body text-center">
                 <span>Make sure your connection tunnel with port <strong>8084</strong> to <strong>Spinnaker</strong> is working and then try again.</span>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="importJSONModalId" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span>
+                </button>
+                <h4 class="modal-title"><strong>Import tags via JSON</strong></h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="jsonInputFile">Browse JSON file : </label>
+                        <input type="file" class="form-control" id="jsonInputFile">
+                    </div>
+                    <button type="button" id="importJSONBtnId" class="btn btn-info">Import</button>
+                </form>
+                <br>
+                <span>JSON syntax example</span>
+                <pre>{
+    "demoservice1" : "1.2.1",
+    "demoservice2" : "1.2.1"
+}</pre>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

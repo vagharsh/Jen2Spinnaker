@@ -31,7 +31,7 @@ Need to know
    
 Demo
 ------
-![Dashboard](https://image.ibb.co/cccHKb/Capture.png "Dashboard")
+![Dashboard](https://image.ibb.co/ifZsh6/dashboard.png "Dashboard")
 
 Quick Start
 -----------
@@ -66,8 +66,9 @@ $title = "Deploy Micro-Services";
 
 Release Notes
 ---------
-v 1.2
-- Added connection check and a warning message if no connection.
+v 1.3
+- Added feature : Import service tags from JSON file.
+- Added feature : Check all services buttons, check all pushed checkboxes.
 
 Release notes are available [here](release.md).
 
