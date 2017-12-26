@@ -1,5 +1,8 @@
 Release Notes
 ---------
+[v1.3.1](#)
+- Bug fix on json import ( selected service button click trigger ).
+
 [v1.3](#)
 - Added feature : Import service tags from JSON file.
 - Added feature : Check all services buttons, check all pushed checkboxes.

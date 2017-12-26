@@ -66,9 +66,8 @@ $title = "Deploy Micro-Services";
 
 Release Notes
 ---------
-v 1.3
-- Added feature : Import service tags from JSON file.
-- Added feature : Check all services buttons, check all pushed checkboxes.
+v 1.3.1
+- Bug fix on json import ( selected service button click trigger ).
 
 Release notes are available [here](release.md).
 
