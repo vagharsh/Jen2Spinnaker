@@ -66,8 +66,10 @@ $title = "Deploy Micro-Services";
 
 Release Notes
 ---------
-v 1.3.1
-- Bug fix on json import ( selected service button click trigger ).
+v 1.5
+- Fixed issue when pushing more than 10 images.
+- Now the requests are being sent to the backend individually and not as an array.
+- Logs are disabled for now, until the upcoming version.
 
 Release notes are available [here](release.md).
 
