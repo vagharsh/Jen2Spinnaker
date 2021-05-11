@@ -62,7 +62,7 @@ $title = "Deploy Micro-Services";
 - `$JenkinsJobShortTitle` : This will be used as the Jenkins Build job button text.
 - `$JenkinsJobUrl` : Jenkins Job URL.
 - `$userToken` : the username and the user's token which has the necessary permissions to build this job.
-- `$title` : Application Title.
+- `$title` : Application Title. 
 
 Release Notes
 ---------
