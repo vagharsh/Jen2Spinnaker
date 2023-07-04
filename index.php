@@ -154,7 +154,7 @@ $jen2SpinnakerVersion = trim(file_get_contents('backend/version'));
         </ul>
     </div>
 </footer>
-<script type="text/javascript" language="javascript" src="lib/js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" language="javascript" src="lib/js/jquery-3.7.0.min.js"></script>
 <script type="text/javascript" language="javascript" src="lib/js/bootstrap.min.js"></script>
 <script type="text/javascript" language="javascript" src="lib/js/functions.js"></script>
 <script type="text/javascript" language="javascript" src="lib/js/triggers.js"></script>
